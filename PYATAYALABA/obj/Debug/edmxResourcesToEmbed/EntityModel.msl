@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="EntityModelContainer">
+    <EntitySetMapping Name="UserDataSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.UserData)">
+        <MappingFragment StoreEntitySet="UserDataSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BalanceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Balance)">
+        <MappingFragment StoreEntitySet="BalanceSet">
+          <ScalarProperty Name="NumberCard" ColumnName="NumberCard" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Summa" ColumnName="Summa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserDataBalance" TypeName="EntityModel.UserDataBalance" StoreEntitySet="BalanceSet">
+      <EndProperty Name="UserData">
+        <ScalarProperty Name="Id" ColumnName="UserData_Id" />
+      </EndProperty>
+      <EndProperty Name="Balance">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="UserData_Id" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

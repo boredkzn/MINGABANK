@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYATAYALABA", "PYATAYALABA\PYATAYALABA.csproj", "{CFD100AC-750D-4526-B810-1BEA6BE515FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{74AF489A-CFCD-469E-A3D3-71B0E7BC56D7}"
+	ProjectSection(SolutionItems) = preProject
+		PYATAYALABA\Form1.cs = PYATAYALABA\Form1.cs
+		PYATAYALABA\Form1.Designer.cs = PYATAYALABA\Form1.Designer.cs
+		PYATAYALABA\Form1.resx = PYATAYALABA\Form1.resx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFD100AC-750D-4526-B810-1BEA6BE515FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD100AC-750D-4526-B810-1BEA6BE515FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD100AC-750D-4526-B810-1BEA6BE515FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD100AC-750D-4526-B810-1BEA6BE515FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5912F395-ADC2-4AD3-8A4E-F017F1CD8027}
+	EndGlobalSection
+EndGlobal
