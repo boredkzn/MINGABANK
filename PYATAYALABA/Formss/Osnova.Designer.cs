@@ -34,7 +34,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -56,13 +55,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.l12 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.l12 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -76,12 +75,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label16 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -100,7 +98,6 @@
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Location = new System.Drawing.Point(-9, 0);
@@ -150,16 +147,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(257, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -296,7 +283,7 @@
             this.loginKnopka.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.loginKnopka.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginKnopka.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.loginKnopka.Font = new System.Drawing.Font("Informal Roman", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginKnopka.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginKnopka.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.loginKnopka.Location = new System.Drawing.Point(329, 248);
             this.loginKnopka.Margin = new System.Windows.Forms.Padding(2);
@@ -326,11 +313,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("BLACK STAR", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(539, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 36);
+            this.label7.Size = new System.Drawing.Size(177, 37);
             this.label7.TabIndex = 26;
             this.label7.Text = "MingaBank";
             // 
@@ -420,6 +407,23 @@
             this.panel2.Size = new System.Drawing.Size(271, 130);
             this.panel2.TabIndex = 31;
             // 
+            // l12
+            // 
+            this.l12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(39)))));
+            this.l12.FlatAppearance.BorderSize = 0;
+            this.l12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.l12.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.l12.ForeColor = System.Drawing.Color.White;
+            this.l12.Location = new System.Drawing.Point(-2, 79);
+            this.l12.Margin = new System.Windows.Forms.Padding(2);
+            this.l12.Name = "l12";
+            this.l12.Size = new System.Drawing.Size(241, 66);
+            this.l12.TabIndex = 27;
+            this.l12.Text = "Главный экран";
+            this.l12.UseVisualStyleBackColor = false;
+            this.l12.Visible = false;
+            this.l12.Click += new System.EventHandler(this.l12_Click);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
@@ -441,6 +445,7 @@
             this.linkLabel1.TabIndex = 34;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Подробнее";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label14
             // 
@@ -486,23 +491,6 @@
             this.label18.Size = new System.Drawing.Size(144, 23);
             this.label18.TabIndex = 36;
             this.label18.Text = "Сумма перевода:";
-            // 
-            // l12
-            // 
-            this.l12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(39)))));
-            this.l12.FlatAppearance.BorderSize = 0;
-            this.l12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.l12.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.l12.ForeColor = System.Drawing.Color.White;
-            this.l12.Location = new System.Drawing.Point(-2, 79);
-            this.l12.Margin = new System.Windows.Forms.Padding(2);
-            this.l12.Name = "l12";
-            this.l12.Size = new System.Drawing.Size(241, 66);
-            this.l12.TabIndex = 27;
-            this.l12.Text = "Главный экран";
-            this.l12.UseVisualStyleBackColor = false;
-            this.l12.Visible = false;
-            this.l12.Click += new System.EventHandler(this.l12_Click);
             // 
             // button12
             // 
@@ -721,16 +709,16 @@
             this.panel3.TabIndex = 32;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label15
+            // label16
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(13, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(173, 23);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "У нас клиент - Путин";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(14, 47);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(235, 17);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Только Алексей какой-то из Челнов";
             // 
             // linkLabel2
             // 
@@ -743,17 +731,18 @@
             this.linkLabel2.TabIndex = 35;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Подробнее";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // label16
+            // label15
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(14, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(235, 17);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Только Алексей какой-то из Челнов";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(13, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(173, 23);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "У нас клиент - Путин";
             // 
             // Osnova
             // 
@@ -798,7 +787,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -822,7 +810,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;

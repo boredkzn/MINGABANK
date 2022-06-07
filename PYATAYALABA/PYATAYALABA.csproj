@@ -137,6 +137,7 @@
     <Compile Include="Formss\poplnit.Designer.cs">
       <DependentUpon>poplnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="join.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\UserContext.cs" />
     <Compile Include="UserData.cs">

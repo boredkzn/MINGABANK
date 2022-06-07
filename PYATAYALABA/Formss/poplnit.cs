@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -48,7 +49,10 @@ namespace PYATAYALABA
             {
                 using (EntityModelContainer db = new EntityModelContainer())
                 {
-                    db.BalanceSet.Find(users.Balance.ToList()[0].Id).Summa = Convert.ToString(Convert.ToInt32(users.Balance.ToList()[0].Summa) + Convert.ToInt32(textBox3.Text));
+                    var us = db.UserDataSet.Where(f => f.Id == users.Id).ToList();
+                    var sum = Convert.ToInt32(us[0].Balance.Select(f => f.Summa).ToList()[0]);
+                    var summa = sum + Convert.ToInt32(textBox3.Text);
+                    db.BalanceSet.Find(users.Balance.ToList()[0].Id).Summa = summa.ToString();                                      
                     db.SaveChanges();
                     osnova.label5.Text = db.BalanceSet.Find(users.Balance.ToList()[0].Id).Summa;
                     MessageBox.Show("Пополнено!");

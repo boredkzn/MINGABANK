@@ -17,7 +17,7 @@ namespace PYATAYALABA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserData()
         {
-            this.Balance = new HashSet<Balance>();
+                     
         }
     
         public int Id { get; set; }

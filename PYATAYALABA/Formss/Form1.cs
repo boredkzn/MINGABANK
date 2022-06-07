@@ -25,8 +25,8 @@ namespace PYATAYALABA
             InitializeComponent();
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 
-            textBox1.Text = "3";
-            textBox2.Text = "4";
+            textBox1.Text = "ksu";
+            textBox2.Text = "ksu";
         }
 
         private void regKnopka_Click(object sender, EventArgs e)

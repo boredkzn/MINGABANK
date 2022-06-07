@@ -25,15 +25,21 @@ namespace PYATAYALABA.Formss
 
         private void loginKnopka_Click(object sender, EventArgs e)
         {
-            ulong summa = Convert.ToUInt64(info.Text);
-            ushort srok = Convert.ToUInt16(textBox1.Text);
-            double stavka = Convert.ToDouble(textBox2.Text);
-            double plata = (summa + summa * stavka * srok / 100) / (srok * 12);
-            textBox3.Text = "" + Math.Round(plata, 2);
-            info.Text = "";
-            textBox1.Text = "";
-            textBox2.Text = "";
+            try
+            {
+                var summa = Convert.ToUInt64(info.Text);
+                var srok = Convert.ToUInt16(textBox1.Text);
+                var stavka = Convert.ToDouble(textBox2.Text) / 12 / 100;
+                var obstavka = Math.Pow((1 + stavka), srok);
+                var plata = summa * stavka * obstavka / (obstavka - 1);
+                textBox3.Text = Math.Round(plata, 2).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Введите данные");
+            }
             
+        
         }
 
         private void button1_Click(object sender, EventArgs e)

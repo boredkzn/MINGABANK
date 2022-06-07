@@ -18,9 +18,9 @@ namespace PYATAYALABA
         public Admini()
         {
             InitializeComponent();
-            using (UserContext db = new UserContext())
+            using (EntityModelContainer us = new EntityModelContainer())
             {
-                foreach (Users users in db.Users)
+                foreach (UserData users in us.UserDataSet.ToList())
                 {
                     listBox1.Items.Add(users.Login);
                     
@@ -39,41 +39,38 @@ namespace PYATAYALABA
         public void UpdateListBox()
         {
             listBox1.Items.Clear();
-            using (UserContext db = new UserContext())
+            using (EntityModelContainer db = new EntityModelContainer())
             {
-                for (int i = 0; i < db.Users.ToList().Count; i++)
+                for (int i = 0; i < db.UserDataSet.ToList().Count; i++)
                 {
-                    listBox1.Items.Add(db.Users.ToList()[i].Login);
+                    listBox1.Items.Add(db.UserDataSet.ToList()[i].Login);
                 }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (UserContext db = new UserContext())
+            using (EntityModelContainer us = new EntityModelContainer())
             {
-                foreach (Users users in db.Users)
+                foreach (UserData userss in us.UserDataSet.ToList())
                 {
-                    if (Convert.ToString(listBox1.SelectedItem) == Convert.ToString(users.Login))
+                    if (Convert.ToString(listBox1.SelectedItem) == Convert.ToString(userss.Login))
                     {
-
-                        db.Users.Remove(users);
+                        foreach(Balance bal in us.BalanceSet.ToList())
+                        {
+                            if (bal.UserData.Id == userss.Id)
+                            {
+                                us.BalanceSet.Remove(bal);
+                                break;
+                            }
+                        }                     
+                        us.UserDataSet.Remove(userss);                       
                     }
-
                 }
-                db.SaveChanges();
+                us.SaveChanges();
             }
             this.UpdateListBox();
-            //for (int i = 0; i <= this.ListAccounts.accounts.Count; i++)
-            //{
-
-            //    if (Convert.ToString(listBox1.SelectedItem) == this.ListAccounts.accounts[i].Surname)
-            //    {
-            //        MessageBox.Show("");
-            //        this.ListAccounts.accounts.Remove(this.ListAccounts.accounts[i]);
-            //    }
-            //}
-            //listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+         
         }
 
         private void Admini_Load(object sender, EventArgs e)
